@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="回归是一种极易理解的模型，就相当于y=f(x)，表明自变量x与因变量y的关系。最常见问题有如医生治病时的望、闻、问、切，之后判定病人是否生病或生了什么病，其中的望闻问切就是获取自变量x，即特征数据，判断是否生病就相当于获取因变量y，即预测分类。">
+<meta name="keywords" content="machine learning,regression">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="wiyee.top/2019/04/03/hello-world/index.html">
+<meta property="og:title" content="LinearRegression">
+<meta property="og:url" content="wiyee.top/2019/04/02/linearRegresiion/index.html">
 <meta property="og:site_name" content="wiyee&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="回归是一种极易理解的模型，就相当于y=f(x)，表明自变量x与因变量y的关系。最常见问题有如医生治病时的望、闻、问、切，之后判定病人是否生病或生了什么病，其中的望闻问切就是获取自变量x，即特征数据，判断是否生病就相当于获取因变量y，即预测分类。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T00:57:17.540Z">
+<meta property="og:updated_time" content="2017-06-21T14:35:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="LinearRegression">
+<meta name="twitter:description" content="回归是一种极易理解的模型，就相当于y=f(x)，表明自变量x与因变量y的关系。最常见问题有如医生治病时的望、闻、问、切，之后判定病人是否生病或生了什么病，其中的望闻问切就是获取自变量x，即特征数据，判断是否生病就相当于获取因变量y，即预测分类。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | wiyee&#39;s blog</title>
+<title>LinearRegression | wiyee&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -266,11 +267,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-linearRegresiion" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/03/hello-world/" class="article-date">
-      <time datetime="2019-04-03T00:57:17.540Z" itemprop="datePublished">2019-04-03</time>
+      <a href="/2019/04/02/linearRegresiion/" class="article-date">
+      <time datetime="2019-04-02T08:50:41.000Z" itemprop="datePublished">2019-04-02</time>
 </a>
 
 
@@ -285,7 +286,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      LinearRegression
     </h1>
   
 
@@ -293,8 +294,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/machine-learning/">machine learning</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/">machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/regression/">regression</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -302,16 +311,91 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p><excerpt in index | 首页摘要><br>回归是一种极易理解的模型，就相当于y=f(x)，表明自变量x与因变量y的关系。最常见问题有如医生治病时的望、闻、问、切，之后判定病人是否生病或生了什么病，其中的望闻问切就是获取自变量x，即特征数据，判断是否生病就相当于获取因变量y，即预测分类。<br><a id="more"></a></excerpt></p>
+<the rest of contents | 余下全文>
 
+
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><p>这里使用uci上的开源数据集</p>
+<h3 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h3><p>数据集包含从联合循环发电厂6年（2006-2011年）收集的9568个数据点，当发电厂设置为满负荷工作时。特点包括小时平均环境变量温度（T），环境压力（AP），相对湿度（RH）和排气真空（V），以预测工厂的净小时电能输出（EP）。<br>联合循环发电厂（CCPP）由燃气轮机（GT），蒸汽轮机（ST）和热回收蒸汽发生器组成。在CCPP中，电力由燃气和蒸汽轮机产生，这些汽轮机组合在一个循环中，并从一个涡轮机转移到另一个涡轮机。虽然真空从蒸汽涡轮机吸取并对其产生影响，但其他三种环境参数影响GT性能。<br>为了与我们的基线研究进行比较，并允许进行5x2倍的统计测试，我们提供数据洗牌五次。对于每个混洗2倍CV进行，所得到的10个测量用于统计测试。<br>我们以.ods和.xlsx格式提供数据。</p>
+<h3 id="属性信息："><a href="#属性信息：" class="headerlink" title="属性信息："></a>属性信息：</h3><p>特征包括小时平均环境变量</p>
+<ul>
+<li>温度（T）在1.81℃和37.11℃的范围内，</li>
+<li>环境压力（AP）在992.89-1033.30 milibar范围内，</li>
+<li>相对湿度（RH）在25.56％至100.16％之间</li>
+<li>排气真空度（V）范围25.36-81.56厘米汞柱</li>
+<li>净小时电能输出（PE）420.26-495.76兆瓦<br>平均值来自位于工厂周围的各种传感器，每秒记录环境变量。 这些变量在没有标准化的情况下给出。<br><a href="http://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant" target="_blank" rel="noopener">http://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant</a></li>
+</ul>
+<h3 id="数据下载："><a href="#数据下载：" class="headerlink" title="数据下载："></a>数据下载：</h3><p><a href="http://archive.ics.uci.edu/ml/machine-learning-databases/00294/" target="_blank" rel="noopener"> http://archive.ics.uci.edu/ml/machine-learning-databases/00294/</a></p>
+<h2 id="问题模型"><a href="#问题模型" class="headerlink" title="问题模型"></a>问题模型</h2><p>我们的问题是得到一个线性的关系，对应PE是样本输出，而AT/V/AP/RH这4个是样本特征， 机器学习的目的就是得到一个线性回归模型，即:</p>
+<pre><code>PE=θ0+θ1∗AT+θ2∗V+θ3∗AP+θ4∗RH
+</code></pre><p>而需要学习的，就是θ0,θ1,θ2,θ3,θ4这5个参数。</p>
+<h2 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h2><p>下载完数据后会得到一个压缩文件，解压后可以得到一个后缀为.xlsx的文件，我们使用excel打开这个文件后，将文件另存为csv格式，我们会使用这个csv格式的文件进行线性回归。<br>因为这个csv格式中没有非法数据，我们不需要进行预处理操作。</p>
+<p>######备注：数据的标准化操作会在sklearn中进行，不需要我们另外进行标准化。</p>
+<h2 id="用Pandas读数据"><a href="#用Pandas读数据" class="headerlink" title="用Pandas读数据"></a>用Pandas读数据</h2><h3 id="导入需要的几个python库"><a href="#导入需要的几个python库" class="headerlink" title="导入需要的几个python库"></a>导入需要的几个python库</h3><pre><code># 需要使用的几个库
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from sklearn import datasets, linear_model
+</code></pre><h3 id="使用pandas读取数据"><a href="#使用pandas读取数据" class="headerlink" title="使用pandas读取数据"></a>使用pandas读取数据</h3><pre><code>data = pd.read_csv(&apos;CCPP.csv&apos;)
+print data
+# 测试读取数据
+# data.head()读取前5条数据，data.tail()读取最后5条数据
+</code></pre><h2 id="划分数据"><a href="#划分数据" class="headerlink" title="划分数据"></a>划分数据</h2><pre><code># 查看数据的维数
+print data.shape
+X = data[[&apos;AT&apos;, &apos;V&apos;, &apos;AP&apos;, &apos;RH&apos;]]
+Y = data[[&apos;PE&apos;]]
+print X.head()
+print Y.head()
+</code></pre><h3 id="我们的目的就是训练出一个模型，给定’AT’-‘V’-‘AP’-‘RH’四种数据后，预测出’PE’的数据"><a href="#我们的目的就是训练出一个模型，给定’AT’-‘V’-‘AP’-‘RH’四种数据后，预测出’PE’的数据" class="headerlink" title="我们的目的就是训练出一个模型，给定’AT’, ‘V’, ‘AP’, ‘RH’四种数据后，预测出’PE’的数据"></a>我们的目的就是训练出一个模型，给定’AT’, ‘V’, ‘AP’, ‘RH’四种数据后，预测出’PE’的数据</h3><h2 id="划分训练集和测试集"><a href="#划分训练集和测试集" class="headerlink" title="划分训练集和测试集"></a>划分训练集和测试集</h2><h3 id="在python代码中导入库"><a href="#在python代码中导入库" class="headerlink" title="在python代码中导入库"></a>在python代码中导入库</h3><pre><code>from sklearn.cross_validation import train_test_split
+
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.3,random_state=0)
+# test_size为测试集在数据中所占比重
+# 查看训练集和测试集的唯独
+print X_train.shape
+print X_test.shape
+print Y_train.shape
+print Y_test.shape
+</code></pre><h2 id="模型构建"><a href="#模型构建" class="headerlink" title="模型构建"></a>模型构建</h2><p>sklearn线性回归的损失函数默使用最小二乘法来实现</p>
+<pre><code>from sklearn.linear_model import LinearRegression
+linreg = LinearRegression()
+linreg.fit(X_train, Y_train)
+</code></pre><p>拟合完毕后，我们看看我们的需要的模型系数结果：</p>
+<pre><code># 打印偏置项和各特征权重
+print linreg.intercept_
+print linreg.coef_
+</code></pre><h3 id="输出结果为："><a href="#输出结果为：" class="headerlink" title="输出结果为："></a>输出结果为：</h3><pre><code>[ 448.53067141]
+[[-1.9797936  -0.23300225  0.06812315 -0.15839461]]
+</code></pre><h3 id="因此我们得到了步骤2中所需的5个参数，可以得到如下关系："><a href="#因此我们得到了步骤2中所需的5个参数，可以得到如下关系：" class="headerlink" title="因此我们得到了步骤2中所需的5个参数，可以得到如下关系："></a>因此我们得到了步骤2中所需的5个参数，可以得到如下关系：</h3><pre><code>PE=448.53067141−1.9797936∗AT−0.23300225∗V+0.06812315∗AP-0.15839461∗RHPE　
+</code></pre><h2 id="模型评价"><a href="#模型评价" class="headerlink" title="模型评价"></a>模型评价</h2><p>我们需要评估我们的模型的好坏程度，对于线性回归来说，我们一般用均方差（Mean Squared Error, MSE）或者均方根差(Root Mean Squared Error, RMSE)在测试集上的表现来评价模型的好坏。</p>
+<h3 id="我们看看我们的模型的MSE和RMSE，代码如下："><a href="#我们看看我们的模型的MSE和RMSE，代码如下：" class="headerlink" title="我们看看我们的模型的MSE和RMSE，代码如下："></a>我们看看我们的模型的MSE和RMSE，代码如下：</h3><pre><code># 模型拟合测试集
+from sklearn import metrics
+y_pred = linreg.predict(X_test)
+# 用scikit-learn计算MSE
+print &quot;MSE:&quot;,metrics.mean_squared_error(y_test, y_pred)
+# 用scikit-learn计算RMSE
+print &quot;RMSE:&quot;,np.sqrt(metrics.mean_squared_error(y_test, y_pred))
+</code></pre><h3 id="一种特征选择的方式，去掉某个特征后重复进行一次试验，观察mse和rmse的变化。"><a href="#一种特征选择的方式，去掉某个特征后重复进行一次试验，观察mse和rmse的变化。" class="headerlink" title="一种特征选择的方式，去掉某个特征后重复进行一次试验，观察mse和rmse的变化。"></a>一种特征选择的方式，去掉某个特征后重复进行一次试验，观察mse和rmse的变化。</h3><p>可以看出，去掉RH后，模型拟合的没有加上RH的好，MSE变大了。说明RH对结果的预测还是有影响的。</p>
+<h2 id="交叉验证"><a href="#交叉验证" class="headerlink" title="交叉验证"></a>交叉验证</h2><p>我们可以通过交叉验证来持续优化模型，代码如下，我们采用10折交叉验证，即cross_val_predict中的cv参数为10：</p>
+<pre><code># 交叉验证
+from sklearn.cross_validation import cross_val_predict
+X2 = data[[&apos;AT&apos;, &apos;V&apos;, &apos;AP&apos;, &apos;RH&apos;]]
+Y2 = data[[&apos;PE&apos;]]
+
+predicted = cross_val_predict(linreg, X, Y, cv=10)
+# print predicted
+# 用scikit-learn计算MSE
+print &quot;10折交叉验证的MSE:&quot;,metrics.mean_squared_error(Y, predicted)
+# 用scikit-learn计算RMSE
+print &quot;10折交叉验证的RMSE:&quot;,np.sqrt(metrics.mean_squared_error(Y, predicted))
+</code></pre><h2 id="利用matlibplot画图观察结果"><a href="#利用matlibplot画图观察结果" class="headerlink" title="利用matlibplot画图观察结果"></a>利用matlibplot画图观察结果</h2><p>这里画图真实值和预测值的变化关系，离中间的直线y=x直接越近的点代表预测损失越低。代码如下：</p>
+<pre><code># matplotlib画图
+fig, ax = plt.subplots()
+ax.scatter(Y,predicted)
+ax.plot([Y.min(), Y.max()], [Y.min(), Y.max()], &apos;k--&apos;, lw=4)
+ax.set_xlabel(&apos;Measured&apos;)
+ax.set_ylabel(&apos;Predicted&apos;)
+plt.show()
+</code></pre></the>
       
     </div>
     
@@ -319,13 +403,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/03/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2019/04/02/linearRegresiion/">LinearRegression</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">wiyee</a></p>
-        <p><span>发布时间:</span>2019-04-03, 08:57:17</p>
-        <p><span>最后更新:</span>2019-04-03, 08:57:17</p>
+        <p><span>发布时间:</span>2019-04-02, 16:50:41</p>
+        <p><span>最后更新:</span>2017-06-21, 22:35:23</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/03/hello-world/" title="Hello World">wiyee.top/2019/04/03/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: wiyee.top/2019/04/03/hello-world/　　作者: wiyee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/02/linearRegresiion/" title="LinearRegression">wiyee.top/2019/04/02/linearRegresiion/</a>
+            <span class="copy-path" data-clipboard-text="原文: wiyee.top/2019/04/02/linearRegresiion/　　作者: wiyee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -337,10 +421,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/04/02/推荐系统学习/">
+                    一篇kdd上的推荐系统相关的论文
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/02/mysql安装配置/">
-                    ubuntu安装和删除mysql
+                <a href="/2019/04/02/maven配置文件详解/">
+                    maven配置pom.xml
                 </a>
             </div>
         
@@ -352,7 +442,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数据集"><span class="toc-number">1.</span> <span class="toc-text">数据集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据介绍："><span class="toc-number">1.1.</span> <span class="toc-text">数据介绍：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性信息："><span class="toc-number">1.2.</span> <span class="toc-text">属性信息：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据下载："><span class="toc-number">1.3.</span> <span class="toc-text">数据下载：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题模型"><span class="toc-number">2.</span> <span class="toc-text">问题模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据清洗"><span class="toc-number">3.</span> <span class="toc-text">数据清洗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用Pandas读数据"><span class="toc-number">4.</span> <span class="toc-text">用Pandas读数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#导入需要的几个python库"><span class="toc-number">4.1.</span> <span class="toc-text">导入需要的几个python库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用pandas读取数据"><span class="toc-number">4.2.</span> <span class="toc-text">使用pandas读取数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#划分数据"><span class="toc-number">5.</span> <span class="toc-text">划分数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#我们的目的就是训练出一个模型，给定’AT’-‘V’-‘AP’-‘RH’四种数据后，预测出’PE’的数据"><span class="toc-number">5.1.</span> <span class="toc-text">我们的目的就是训练出一个模型，给定’AT’, ‘V’, ‘AP’, ‘RH’四种数据后，预测出’PE’的数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#划分训练集和测试集"><span class="toc-number">6.</span> <span class="toc-text">划分训练集和测试集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在python代码中导入库"><span class="toc-number">6.1.</span> <span class="toc-text">在python代码中导入库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模型构建"><span class="toc-number">7.</span> <span class="toc-text">模型构建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#输出结果为："><span class="toc-number">7.1.</span> <span class="toc-text">输出结果为：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#因此我们得到了步骤2中所需的5个参数，可以得到如下关系："><span class="toc-number">7.2.</span> <span class="toc-text">因此我们得到了步骤2中所需的5个参数，可以得到如下关系：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模型评价"><span class="toc-number">8.</span> <span class="toc-text">模型评价</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#我们看看我们的模型的MSE和RMSE，代码如下："><span class="toc-number">8.1.</span> <span class="toc-text">我们看看我们的模型的MSE和RMSE，代码如下：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一种特征选择的方式，去掉某个特征后重复进行一次试验，观察mse和rmse的变化。"><span class="toc-number">8.2.</span> <span class="toc-text">一种特征选择的方式，去掉某个特征后重复进行一次试验，观察mse和rmse的变化。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#交叉验证"><span class="toc-number">9.</span> <span class="toc-text">交叉验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用matlibplot画图观察结果"><span class="toc-number">10.</span> <span class="toc-text">利用matlibplot画图观察结果</span></a></li></ol>
         
     </div>
     <style>
@@ -388,7 +478,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| wiyee's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"LinearRegression　| wiyee's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -422,13 +512,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/04/02/推荐系统学习/" title="上一篇: 一篇kdd上的推荐系统相关的论文">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/02/mysql安装配置/" title="下一篇: ubuntu安装和删除mysql">
+            <a href="/2019/04/02/maven配置文件详解/" title="下一篇: maven配置pom.xml">
                 <i class="fa fa-angle-right"></i>
             </a>
         

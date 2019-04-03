@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="在ubuntu上如何安装tenserflow。">
+<meta name="keywords" content="machine learning,deep learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="wiyee.top/2019/04/03/hello-world/index.html">
+<meta property="og:title" content="Installing TensorFlow with virtualenv">
+<meta property="og:url" content="wiyee.top/2019/04/02/tensorflow安装/index.html">
 <meta property="og:site_name" content="wiyee&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在ubuntu上如何安装tenserflow。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T00:57:17.540Z">
+<meta property="og:updated_time" content="2017-06-21T14:29:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Installing TensorFlow with virtualenv">
+<meta name="twitter:description" content="在ubuntu上如何安装tenserflow。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | wiyee&#39;s blog</title>
+<title>Installing TensorFlow with virtualenv | wiyee&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -266,11 +267,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-tensorflow安装" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/03/hello-world/" class="article-date">
-      <time datetime="2019-04-03T00:57:17.540Z" itemprop="datePublished">2019-04-03</time>
+      <a href="/2019/04/02/tensorflow安装/" class="article-date">
+      <time datetime="2019-04-02T08:50:41.000Z" itemprop="datePublished">2019-04-02</time>
 </a>
 
 
@@ -285,7 +286,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Installing TensorFlow with virtualenv
     </h1>
   
 
@@ -293,8 +294,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/machine-learning/">machine learning</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deep-learning/">deep learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/">machine learning</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -302,16 +311,28 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p><excerpt in index | 首页摘要><br>在ubuntu上如何安装tenserflow。<br><a id="more"></a></excerpt></p>
+<the rest of contents | 余下全文>
 
+<h3 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h3><h3 id="Take-the-following-steps-to-install-TensorFlow-with-Virtualenv"><a href="#Take-the-following-steps-to-install-TensorFlow-with-Virtualenv" class="headerlink" title="Take the following steps to install TensorFlow with Virtualenv:"></a>Take the following steps to install TensorFlow with Virtualenv:</h3><h4 id="Install-pip-and-virtualenv-by-issuing-the-following-command"><a href="#Install-pip-and-virtualenv-by-issuing-the-following-command" class="headerlink" title="Install pip and virtualenv by issuing the following command:"></a>Install pip and virtualenv by issuing the following command:</h4><pre><code>$ sudo apt-get install python-pip python-dev python-virtualenv 
+</code></pre><h4 id="Create-a-virtualenv-environment-by-issuing-the-following-command"><a href="#Create-a-virtualenv-environment-by-issuing-the-following-command" class="headerlink" title="Create a virtualenv environment by issuing the following command:"></a>Create a virtualenv environment by issuing the following command:</h4><pre><code>$ virtualenv --system-site-packages targetDirectory 
+</code></pre><p>The targetDirectory specifies the top of the virtualenv tree. Our instructions assume that targetDirectory is ~/tensorflow, but you may choose any directory.</p>
+<h4 id="Activate-the-virtualenv-environment-by-issuing-one-of-the-following-commands"><a href="#Activate-the-virtualenv-environment-by-issuing-one-of-the-following-commands" class="headerlink" title="Activate the virtualenv environment by issuing one of the following commands:"></a>Activate the virtualenv environment by issuing one of the following commands:</h4><pre><code>$ source ~/tensorflow/bin/activate # bash, sh, ksh, or zsh
+$ source ~/tensorflow/bin/activate.csh  # csh or tcsh
+</code></pre><p>The preceding source command should change your prompt to the following:</p>
+<pre><code>(tensorflow)$ 
+</code></pre><h4 id="Issue-one-of-the-following-commands-to-install-TensorFlow-in-the-active-virtualenv-environment"><a href="#Issue-one-of-the-following-commands-to-install-TensorFlow-in-the-active-virtualenv-environment" class="headerlink" title="Issue one of the following commands to install TensorFlow in the active virtualenv environment:"></a>Issue one of the following commands to install TensorFlow in the active virtualenv environment:</h4><pre><code>(tensorflow)$ pip install --upgrade tensorflow      # for Python 2.7
+(tensorflow)$ pip3 install --upgrade tensorflow     # for Python 3.n
+(tensorflow)$ pip install --upgrade tensorflow-gpu  # for Python 2.7 and GPU
+(tensorflow)$ pip3 install --upgrade tensorflow-gpu # for Python 3.n and GPU
+</code></pre><p>If the preceding command succeeds, skip Step 5. If the preceding command fails, perform Step 5.</p>
+<h4 id="Optional-If-Step-4-failed-typically-because-you-invoked-a-pip-version-lower-than-8-1-install-TensorFlow-in-the-active-virtualenv-environment-by-issuing-a-command-of-the-following-format"><a href="#Optional-If-Step-4-failed-typically-because-you-invoked-a-pip-version-lower-than-8-1-install-TensorFlow-in-the-active-virtualenv-environment-by-issuing-a-command-of-the-following-format" class="headerlink" title="(Optional) If Step 4 failed (typically because you invoked a pip version lower than 8.1), install TensorFlow in the active virtualenv environment by issuing a command of the following format:"></a>(Optional) If Step 4 failed (typically because you invoked a pip version lower than 8.1), install TensorFlow in the active virtualenv environment by issuing a command of the following format:</h4><pre><code>(tensorflow)$ pip install --upgrade TF_PYTHON_URL   # Python 2.7
+(tensorflow)$ pip3 install --upgrade TF_PYTHON_URL  # Python 3.N 
+</code></pre><p>where TF_PYTHON_URL identifies the URL of the TensorFlow Python package. The appropriate value of TF_PYTHON_URLdepends on the operating system, Python version, and GPU support. Find the appropriate value for TF_PYTHON_URL for your system here. For example, if you are installing TensorFlow for Linux, Python 2.7, and CPU-only support, issue the following command to install TensorFlow in the active virtualenv environment:</p>
+<pre><code>(tensorflow)$ pip3 install --upgrade \
+ https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.1-cp34-cp34m-linux_x86_64.whl
+</code></pre><p>If you encounter installation problems, see Common Installation Problems.</p>
+</the>
       
     </div>
     
@@ -319,13 +340,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/03/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2019/04/02/tensorflow安装/">Installing TensorFlow with virtualenv</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">wiyee</a></p>
-        <p><span>发布时间:</span>2019-04-03, 08:57:17</p>
-        <p><span>最后更新:</span>2019-04-03, 08:57:17</p>
+        <p><span>发布时间:</span>2019-04-02, 16:50:41</p>
+        <p><span>最后更新:</span>2017-06-21, 22:29:35</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/03/hello-world/" title="Hello World">wiyee.top/2019/04/03/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: wiyee.top/2019/04/03/hello-world/　　作者: wiyee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/02/tensorflow安装/" title="Installing TensorFlow with virtualenv">wiyee.top/2019/04/02/tensorflow安装/</a>
+            <span class="copy-path" data-clipboard-text="原文: wiyee.top/2019/04/02/tensorflow安装/　　作者: wiyee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -337,10 +358,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/04/02/sklearn中logistic回归的参数设置/">
+                    sklern中logistic回归参数设置
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/02/mysql安装配置/">
-                    ubuntu安装和删除mysql
+                <a href="/2019/04/02/ubuntu ssh/">
+                    ubuntu配置ssh
                 </a>
             </div>
         
@@ -352,7 +379,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ubuntu"><span class="toc-number">1.</span> <span class="toc-text">ubuntu</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Take-the-following-steps-to-install-TensorFlow-with-Virtualenv"><span class="toc-number">2.</span> <span class="toc-text">Take the following steps to install TensorFlow with Virtualenv:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Install-pip-and-virtualenv-by-issuing-the-following-command"><span class="toc-number">2.1.</span> <span class="toc-text">Install pip and virtualenv by issuing the following command:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-a-virtualenv-environment-by-issuing-the-following-command"><span class="toc-number">2.2.</span> <span class="toc-text">Create a virtualenv environment by issuing the following command:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Activate-the-virtualenv-environment-by-issuing-one-of-the-following-commands"><span class="toc-number">2.3.</span> <span class="toc-text">Activate the virtualenv environment by issuing one of the following commands:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Issue-one-of-the-following-commands-to-install-TensorFlow-in-the-active-virtualenv-environment"><span class="toc-number">2.4.</span> <span class="toc-text">Issue one of the following commands to install TensorFlow in the active virtualenv environment:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Optional-If-Step-4-failed-typically-because-you-invoked-a-pip-version-lower-than-8-1-install-TensorFlow-in-the-active-virtualenv-environment-by-issuing-a-command-of-the-following-format"><span class="toc-number">2.5.</span> <span class="toc-text">(Optional) If Step 4 failed (typically because you invoked a pip version lower than 8.1), install TensorFlow in the active virtualenv environment by issuing a command of the following format:</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -388,7 +415,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| wiyee's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Installing TensorFlow with virtualenv　| wiyee's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -422,13 +449,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/04/02/sklearn中logistic回归的参数设置/" title="上一篇: sklern中logistic回归参数设置">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/02/mysql安装配置/" title="下一篇: ubuntu安装和删除mysql">
+            <a href="/2019/04/02/ubuntu ssh/" title="下一篇: ubuntu配置ssh">
                 <i class="fa fa-angle-right"></i>
             </a>
         

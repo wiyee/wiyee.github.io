@@ -15,17 +15,26 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。  RequestMapping注解类的使用方法 RequestMapping注解类的属性 定义Ant风格和带占位符的URL">
+<meta name="keywords" content="springmvc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="wiyee.top/2019/04/03/hello-world/index.html">
+<meta property="og:title" content="RequestMapping 注解类">
+<meta property="og:url" content="wiyee.top/2019/04/02/RequestMapping 注解类/index.html">
 <meta property="og:site_name" content="wiyee&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。  RequestMapping注解类的使用方法 RequestMapping注解类的属性 定义Ant风格和带占位符的URL">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T00:57:17.540Z">
+<meta property="og:image" content="/image/requestmapping/1.png">
+<meta property="og:image" content="/image/requestmapping/2.png">
+<meta property="og:image" content="/image/requestmapping/7.png">
+<meta property="og:image" content="/image/requestmapping/8.png">
+<meta property="og:image" content="/image/requestmapping/9.png">
+<meta property="og:image" content="/image/requestmapping/10.png">
+<meta property="og:image" content="/image/requestmapping/11.png">
+<meta property="og:updated_time" content="2017-06-29T11:16:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="RequestMapping 注解类">
+<meta name="twitter:description" content="RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。  RequestMapping注解类的使用方法 RequestMapping注解类的属性 定义Ant风格和带占位符的URL">
+<meta name="twitter:image" content="/image/requestmapping/1.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +66,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | wiyee&#39;s blog</title>
+<title>RequestMapping 注解类 | wiyee&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -266,11 +275,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-RequestMapping 注解类" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/03/hello-world/" class="article-date">
-      <time datetime="2019-04-03T00:57:17.540Z" itemprop="datePublished">2019-04-03</time>
+      <a href="/2019/04/02/RequestMapping 注解类/" class="article-date">
+      <time datetime="2019-04-02T08:50:41.000Z" itemprop="datePublished">2019-04-02</time>
 </a>
 
 
@@ -285,7 +294,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      RequestMapping 注解类
     </h1>
   
 
@@ -293,8 +302,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/springmvc/">springmvc</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/springmvc/">springmvc</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -302,15 +319,54 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p><excerpt in index | 首页摘要><br>RequestMapping是一个用来处理请求地址映射的注解，可用于类或方法上。用于类上，表示类中的所有响应请求的方法都是以该地址作为父路径。</excerpt></p>
+<ul>
+<li>RequestMapping注解类的使用方法</li>
+<li>RequestMapping注解类的属性</li>
+<li>定义Ant风格和带占位符的URL<a id="more"></a>
+<the rest of contents | 余下全文>
+
+</the></li>
+</ul>
+<h2 id="RequestMapping注解类的使用方法"><a href="#RequestMapping注解类的使用方法" class="headerlink" title="RequestMapping注解类的使用方法"></a>RequestMapping注解类的使用方法</h2><ul>
+<li>开发Controller控制器类，使用@Controller注解标注，并在配置文件中用<a href="context:component-scan/" target="_blank" rel="noopener">context:component-scan/</a>扫描</li>
+<li>在Controller控制器类的类定义和方法定义处都可以标注@RequestMapping注解</li>
+<li>DispatcherServlet截获请求后，就可以通过控制器上的@RequestMapping提供的映射信息确定请求所对应的处理方法<br><img src="/image/requestmapping/1.png" width="550" alt="1" align="center"></li>
+</ul>
+<h2 id="RequestMapping注解类的属性"><a href="#RequestMapping注解类的属性" class="headerlink" title="RequestMapping注解类的属性"></a>RequestMapping注解类的属性</h2><p>RequestMapping注解类的属性，分别有 value, method, consumes, produces, params, headers</p>
+<h3 id="value"><a href="#value" class="headerlink" title="value"></a>value</h3><ul>
+<li>代表具体的请求路径，比如上面的 /user， /login 都是value的值</li>
+<li>value可以省略，就像例子中一样，直接用 @RequestMapping(“/login”) 的格式，它等同于@RequestMapping(value = “/login”)<br><img src="/image/requestmapping/2.png" width="550" alt="2" align="center"></li>
+</ul>
+<h3 id="method"><a href="#method" class="headerlink" title="method"></a>method</h3><ul>
+<li>指定请求的method类型， GET、POST、PUT、DELETE等</li>
+<li>例：@RequestMapping(value = “/login”, method = RequestMethod.POST) 那么只有发送POST请求才会触发这个方法</li>
+<li>例：@RequestMapping(value = “/login”, method = {RequestMethod.POST, RequestMethod.GET})<br>&lt;img src=”/image/requestmapping/3.png” width = “500”alt=”3” align= center /&gt;<br>&lt;img src=”/image/requestmapping/4.png” width = “550”alt=”4” align= center /&gt;</li>
+</ul>
+<h3 id="consumes"><a href="#consumes" class="headerlink" title="consumes"></a>consumes</h3><ul>
+<li>指定请求的提交内容类型（Content-Type），例如application/json, text/html</li>
+<li>它的值既可以是字符串也可以是数组<br>&lt;img src=”/image/requestmapping/5.png” width = “550”alt=”5” align= center /&gt;<br>&lt;img src=”/image/requestmapping/6.png” width = “550”alt=”6” align= center /&gt;</li>
+</ul>
+<h3 id="produces"><a href="#produces" class="headerlink" title="produces"></a>produces</h3><ul>
+<li>指定请求中必须包含某些参数值，才会触发这个处理方法。<br><img src="/image/requestmapping/7.png" width="550" alt="7" align="center"></li>
+</ul>
+<h3 id="params"><a href="#params" class="headerlink" title="params"></a>params</h3><ul>
+<li>指定请求中必须包含某些参数值，才会触发这个处理方法</li>
+<li>参数中除了使用=等号外，还可以使用!=号，表示在参数的值不等于的情况下触发这个方法</li>
+<li>也可以不指定具体的值，直接使用 “paramName” 的格式，代表请求中必须包含参数名为 paramName 的参数</li>
+<li>直接使用 “!paramName”格式表示请求不能包含名为paramName的请求参数<br><img src="/image/requestmapping/8.png" width="550" alt="8" align="center"><br><img src="/image/requestmapping/9.png" width="550" alt="9" align="center"></li>
+</ul>
+<h3 id="headers"><a href="#headers" class="headerlink" title="headers"></a>headers</h3><ul>
+<li>请求头Header中必须包含某些指定的参数值，才能让该方法处理请求<br><img src="/image/requestmapping/10.png" width="550" alt="10" align="center"><br><img src="/image/requestmapping/11.png" width="700" alt="11" align="center"></li>
+</ul>
+<h2 id="定义Ant风格和带占位符的URL"><a href="#定义Ant风格和带占位符的URL" class="headerlink" title="定义Ant风格和带占位符的URL"></a>定义Ant风格和带占位符的URL</h2><p>@RequestMapping不仅支持标准的URL，还支持Ant风格和带{xxx}占位符的URL，下面的URL都是合法的：</p>
+<ul>
+<li>/user/*/login：匹配/user/aaa/login，/user/任意字符/login 等</li>
+<li>/user/**/login：匹配/user/login， /user/aaa/bbb/login 等</li>
+<li>/user/login??：匹配/user/loginAA, /user/loginbb 等</li>
+<li>/user/{userId}：匹配/user/123， /user/234 等</li>
+<li>/user/**/{userId}：匹配/user/aaa/bbb/123，/user/aaa/234等</li>
+</ul>
 
       
     </div>
@@ -319,13 +375,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/03/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2019/04/02/RequestMapping 注解类/">RequestMapping 注解类</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">wiyee</a></p>
-        <p><span>发布时间:</span>2019-04-03, 08:57:17</p>
-        <p><span>最后更新:</span>2019-04-03, 08:57:17</p>
+        <p><span>发布时间:</span>2019-04-02, 16:50:41</p>
+        <p><span>最后更新:</span>2017-06-29, 19:16:01</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/03/hello-world/" title="Hello World">wiyee.top/2019/04/03/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: wiyee.top/2019/04/03/hello-world/　　作者: wiyee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/02/RequestMapping 注解类/" title="RequestMapping 注解类">wiyee.top/2019/04/02/RequestMapping 注解类/</a>
+            <span class="copy-path" data-clipboard-text="原文: wiyee.top/2019/04/02/RequestMapping 注解类/　　作者: wiyee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -337,10 +393,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/04/02/k均值/">
+                    k-均值聚类算法对未标注数据分组
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/02/mysql安装配置/">
-                    ubuntu安装和删除mysql
+                <a href="/2019/04/02/sklearn中logistic回归的参数设置/">
+                    sklern中logistic回归参数设置
                 </a>
             </div>
         
@@ -352,7 +414,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RequestMapping注解类的使用方法"><span class="toc-number">1.</span> <span class="toc-text">RequestMapping注解类的使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RequestMapping注解类的属性"><span class="toc-number">2.</span> <span class="toc-text">RequestMapping注解类的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#value"><span class="toc-number">2.1.</span> <span class="toc-text">value</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#method"><span class="toc-number">2.2.</span> <span class="toc-text">method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#consumes"><span class="toc-number">2.3.</span> <span class="toc-text">consumes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#produces"><span class="toc-number">2.4.</span> <span class="toc-text">produces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#params"><span class="toc-number">2.5.</span> <span class="toc-text">params</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#headers"><span class="toc-number">2.6.</span> <span class="toc-text">headers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定义Ant风格和带占位符的URL"><span class="toc-number">3.</span> <span class="toc-text">定义Ant风格和带占位符的URL</span></a></li></ol>
         
     </div>
     <style>
@@ -388,7 +450,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| wiyee's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"RequestMapping 注解类　| wiyee's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -422,13 +484,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/04/02/k均值/" title="上一篇: k-均值聚类算法对未标注数据分组">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/02/mysql安装配置/" title="下一篇: ubuntu安装和删除mysql">
+            <a href="/2019/04/02/sklearn中logistic回归的参数设置/" title="下一篇: sklern中logistic回归参数设置">
                 <i class="fa fa-angle-right"></i>
             </a>
         

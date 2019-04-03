@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="在数据挖掘中，K-Means算法是一种 cluster analysis 的算法，其主要是来计算数据聚集的算法，主要通过不断地取离种子点最近均值的算法。">
+<meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="wiyee.top/2019/04/03/hello-world/index.html">
+<meta property="og:title" content="k-均值聚类算法对未标注数据分组">
+<meta property="og:url" content="wiyee.top/2019/04/02/k均值/index.html">
 <meta property="og:site_name" content="wiyee&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在数据挖掘中，K-Means算法是一种 cluster analysis 的算法，其主要是来计算数据聚集的算法，主要通过不断地取离种子点最近均值的算法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T00:57:17.540Z">
+<meta property="og:updated_time" content="2017-06-21T14:36:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="k-均值聚类算法对未标注数据分组">
+<meta name="twitter:description" content="在数据挖掘中，K-Means算法是一种 cluster analysis 的算法，其主要是来计算数据聚集的算法，主要通过不断地取离种子点最近均值的算法。">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello World | wiyee&#39;s blog</title>
+<title>k-均值聚类算法对未标注数据分组 | wiyee&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -266,11 +267,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-k均值" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/04/03/hello-world/" class="article-date">
-      <time datetime="2019-04-03T00:57:17.540Z" itemprop="datePublished">2019-04-03</time>
+      <a href="/2019/04/02/k均值/" class="article-date">
+      <time datetime="2019-04-02T08:50:41.000Z" itemprop="datePublished">2019-04-02</time>
 </a>
 
 
@@ -285,7 +286,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      k-均值聚类算法对未标注数据分组
     </h1>
   
 
@@ -293,8 +294,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/machine-learning/">machine learning</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/machine-learning/">machine learning</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -302,16 +311,125 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p><excerpt in index | 首页摘要><br>在数据挖掘中，K-Means算法是一种 cluster analysis 的算法，其主要是来计算数据聚集的算法，主要通过不断地取离种子点最近均值的算法。<br><a id="more"></a></excerpt></p>
+<the rest of contents | 余下全文>
 
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="什么是聚类分析"><a href="#什么是聚类分析" class="headerlink" title="什么是聚类分析"></a>什么是聚类分析</h3><p>聚类分析是在数据中发现数据对象之间的关系，将数据进行分组，组内的相似性越大，组间的差别越大，则聚类效果越好。</p>
+<h3 id="基本的聚类分析算法"><a href="#基本的聚类分析算法" class="headerlink" title="基本的聚类分析算法"></a>基本的聚类分析算法</h3><ol>
+<li><p>K均值：基于原型的、划分的距离技术，它试图发现用户指定个数(K)的簇。</p>
+</li>
+<li><p>凝聚的层次距离：思想是开始时，每个点都作为一个单点簇，然后，重复的合并两个最靠近的簇，直到尝试单个、包含所有点的簇。</p>
+</li>
+<li><p>DBSCAN:一种基于密度的划分距离的算法，簇的个数有算法自动的确定，低密度中的点被视为噪声而忽略，因此其不产生完全聚类。 </p>
+</li>
+</ol>
+<h3 id="距离量度"><a href="#距离量度" class="headerlink" title="距离量度"></a>距离量度</h3><p>不同的距离量度会对距离的结果产生影响，常见的距离量度如下所示：</p>
+<h2 id="K-Means算法"><a href="#K-Means算法" class="headerlink" title="K-Means算法"></a>K-Means算法</h2><p>下面介绍K均值算法：<br>优点：易于实现<br>缺点：可能收敛于局部最小值，在大规模数据收敛慢<br>算法思想较为简单如下所示：</p>
+<pre><code>选择K个点作为初始质心  
+repeat  
+    将每个点指派到最近的质心，形成K个簇  
+    重新计算每个簇的质心  
+until 簇不发生变化或达到最大迭代次数
+</code></pre><p>这里的重新计算每个簇的质心，如何计算的是根据目标函数得来的，因此在开始时我们要考虑 距离度量和目标函数。</p>
+<p>考虑欧几里得距离的数据，使用 误差平方和（Sum of the Squared Error,SSE） 作为聚类的目标函数，两次运行K均值产生的两个不同的簇集，我们更喜欢SSE最小的那个。 </p>
+<p>下面用Python进行实现</p>
+<pre><code># dataSet样本点,k 簇的个数
+# disMeas距离量度，默认为欧几里得距离
+# createCent,初始点的选取
+def kMeans(dataSet, k, distMeas=distEclud, createCent=randCent):
+    m = shape(dataSet)[0] #样本数
+    clusterAssment = mat(zeros((m,2))) #m*2的矩阵                   
+    centroids = createCent(dataSet, k) #初始化k个中心
+    clusterChanged = True             
+    while clusterChanged:      #当聚类不再变化
+        clusterChanged = False
+        for i in range(m):
+            minDist = inf; minIndex = -1
+            for j in range(k): #找到最近的质心
+                distJI = distMeas(centroids[j,:],dataSet[i,:])
+                if distJI &lt; minDist:
+                    minDist = distJI; minIndex = j
+            if clusterAssment[i,0] != minIndex: clusterChanged = True
+            # 第1列为所属质心，第2列为距离
+            clusterAssment[i,:] = minIndex,minDist**2
+        print centroids
+
+        # 更改质心位置
+        for cent in range(k):
+            ptsInClust = dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]
+            centroids[cent,:] = mean(ptsInClust, axis=0) 
+    return centroids, clusterAssment
+</code></pre><p>重点理解一下：</p>
+<pre><code>for cent in range(k):
+  ptsInClust = dataSet[nonzero(clusterAssment[:,0].A==cent)[0]]
+  centroids[cent,:] = mean(ptsInClust, axis=0)
+</code></pre><p>循环每一个质心，找到属于当前质心的所有点，然后根据这些点去更新当前的质心。<br>nonzero()返回的是一个二维的数组，其表示非0的元素位置。</p>
+<pre><code>&gt;&gt;&gt; from numpy import *
+&gt;&gt;&gt; a=array([[1,0,0],[0,1,2],[2,0,0]])
+&gt;&gt;&gt; a
+array([[1, 0, 0],
+       [0, 1, 2],
+       [2, 0, 0]])
+&gt;&gt;&gt; nonzero(a)
+(array([0, 1, 1, 2]), array([0, 1, 2, 0]))
+</code></pre><p>引入辅助函数：</p>
+<pre><code>def loadDataSet(fileName):      #general function to parse tab -delimited floats
+    dataMat = []                #assume last column is target value
+    fr = open(fileName)
+    for line in fr.readlines():
+        curLine = line.strip().split(&apos;\t&apos;)
+        fltLine = map(float,curLine) #map all elements to float()
+        dataMat.append(fltLine)
+    return dataMat
+
+def distEclud(vecA, vecB):
+    return sqrt(sum(power(vecA - vecB, 2))) #la.norm(vecA-vecB)
+
+def randCent(dataSet, k):
+    n = shape(dataSet)[1]
+    centroids = mat(zeros((k,n)))#create centroid mat
+    for j in range(n):#create random cluster centers, within bounds of each dimension
+        minJ = min(dataSet[:,j]) 
+        rangeJ = float(max(dataSet[:,j]) - minJ)
+        centroids[:,j] = mat(minJ + rangeJ * random.rand(k,1))
+    return centroids
+</code></pre><h3 id="运行和结果"><a href="#运行和结果" class="headerlink" title="运行和结果"></a>运行和结果</h3><p>将上述代码写到kMeans.py中，然后打开python交互端。</p>
+<pre><code>&gt;&gt;&gt; from numpy import *
+&gt;&gt;&gt; import kMeans
+&gt;&gt;&gt; dat=mat(kMeans.loadDataSet(&apos;testSet.txt&apos;)) #读入数据
+&gt;&gt;&gt; center，clust=kMeans.kMeans(dat,4)
+[[ 0.90796996  5.05836784]
+ [-2.88425582  0.01687006]
+ [-3.3447423  -1.01730512]
+ [-0.32810867  0.48063528]]
+[[ 1.90508653  3.530091  ]
+ [-3.00984169  2.66771831]
+ [-3.38237045 -2.9473363 ]
+ [ 2.22463036 -1.37361589]]
+[[ 2.54391447  3.21299611]
+ [-2.46154315  2.78737555]
+ [-3.38237045 -2.9473363 ]
+ [ 2.8692781  -2.54779119]]
+[[ 2.6265299   3.10868015]
+ [-2.46154315  2.78737555]
+ [-3.38237045 -2.9473363 ]
+ [ 2.80293085 -2.7315146 ]]
+# 作图
+&gt;&gt;&gt;kMeans(dat,center)
+</code></pre><h3 id="K-Means算法的缺陷"><a href="#K-Means算法的缺陷" class="headerlink" title="K-Means算法的缺陷"></a>K-Means算法的缺陷</h3><p>k均值算法非常简单且使用广泛，但是其有主要的两个缺陷：</p>
+<ol>
+<li><p>K值需要预先给定，属于预先知识，很多情况下K值的估计是非常困难的，对于像计算全部微信用户的交往圈这样的场景就完全的没办法用K-Means进行。对于可以确定K值不会太大但不明确精确的K值的场景，可以进行迭代运算，然后找出Cost Function最小时所对应的K值，这个值往往能较好的描述有多少个簇类。</p>
+</li>
+<li><p>K-Means算法对初始选取的聚类中心点是敏感的，不同的随机种子点得到的聚类结果完全不同</p>
+</li>
+<li><p>K均值算法并不是很所有的数据类型。它不能处理非球形簇、不同尺寸和不同密度的簇，银冠指定足够大的簇的个数是他通常可以发现纯子簇。</p>
+</li>
+<li><p>对离群点的数据进行聚类时，K均值也有问题，这种情况下，离群点检测和删除有很大的帮助。</p>
+</li>
+</ol>
+<h2 id="下面对初始质心的选择进行讨论："><a href="#下面对初始质心的选择进行讨论：" class="headerlink" title="下面对初始质心的选择进行讨论："></a>下面对初始质心的选择进行讨论：</h2><h3 id="拙劣的初始质心"><a href="#拙劣的初始质心" class="headerlink" title="拙劣的初始质心"></a>拙劣的初始质心</h3><p>当初始质心是随机的进行初始化的时候，K均值的每次运行将会产生不同的SSE,而且随机的选择初始质心结果可能很糟糕， 可能只能得到局部的最优解，而无法得到全局的最优解。<br>可以看到程序迭代了4次终止，其得到了局部的最优解，显然我们可以看到其不是全局最优的，我们仍然可以找到一个更小的SSE的聚类。 </p>
+<h3 id="随机初始化的局限"><a href="#随机初始化的局限" class="headerlink" title="随机初始化的局限"></a>随机初始化的局限</h3><p>你可能会想到：多次运行，每次使用一组不同的随机初始质心，然后选择一个具有最小的SSE的簇集。该策略非常的简单，但是效果可能不是很好，这取决于数据集合寻找的簇的个数。</p>
+</the>
       
     </div>
     
@@ -319,13 +437,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/04/03/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2019/04/02/k均值/">k-均值聚类算法对未标注数据分组</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">wiyee</a></p>
-        <p><span>发布时间:</span>2019-04-03, 08:57:17</p>
-        <p><span>最后更新:</span>2019-04-03, 08:57:17</p>
+        <p><span>发布时间:</span>2019-04-02, 16:50:41</p>
+        <p><span>最后更新:</span>2017-06-21, 22:36:15</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/04/03/hello-world/" title="Hello World">wiyee.top/2019/04/03/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: wiyee.top/2019/04/03/hello-world/　　作者: wiyee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/04/02/k均值/" title="k-均值聚类算法对未标注数据分组">wiyee.top/2019/04/02/k均值/</a>
+            <span class="copy-path" data-clipboard-text="原文: wiyee.top/2019/04/02/k均值/　　作者: wiyee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -337,10 +455,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/04/02/maven的安装配置/">
+                    Maven安装配置
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2019/04/02/mysql安装配置/">
-                    ubuntu安装和删除mysql
+                <a href="/2019/04/02/RequestMapping 注解类/">
+                    RequestMapping 注解类
                 </a>
             </div>
         
@@ -352,7 +476,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是聚类分析"><span class="toc-number">1.1.</span> <span class="toc-text">什么是聚类分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本的聚类分析算法"><span class="toc-number">1.2.</span> <span class="toc-text">基本的聚类分析算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#距离量度"><span class="toc-number">1.3.</span> <span class="toc-text">距离量度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#K-Means算法"><span class="toc-number">2.</span> <span class="toc-text">K-Means算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行和结果"><span class="toc-number">2.1.</span> <span class="toc-text">运行和结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#K-Means算法的缺陷"><span class="toc-number">2.2.</span> <span class="toc-text">K-Means算法的缺陷</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下面对初始质心的选择进行讨论："><span class="toc-number">3.</span> <span class="toc-text">下面对初始质心的选择进行讨论：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#拙劣的初始质心"><span class="toc-number">3.1.</span> <span class="toc-text">拙劣的初始质心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#随机初始化的局限"><span class="toc-number">3.2.</span> <span class="toc-text">随机初始化的局限</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -388,7 +512,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello World　| wiyee's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"k-均值聚类算法对未标注数据分组　| wiyee's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -422,13 +546,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/04/02/maven的安装配置/" title="上一篇: Maven安装配置">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/04/02/mysql安装配置/" title="下一篇: ubuntu安装和删除mysql">
+            <a href="/2019/04/02/RequestMapping 注解类/" title="下一篇: RequestMapping 注解类">
                 <i class="fa fa-angle-right"></i>
             </a>
         
